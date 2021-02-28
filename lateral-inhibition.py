@@ -112,13 +112,13 @@ show_2d_activation(img_mona)
 
 #%%
 #Convolve stimulus
-img_mona_activated = stimulus_2d_activation(img_mona, 0.1, 8)
+img_mona_activated = stimulus_2d_activation(img_mona, 0.1, 16)
 show_2d_activation(img_mona_activated)
 
 
 #%%
 #Edge detect stimulus
-img_mona_edges = threshold_activation(img_mona_activated, 0.385)
+img_mona_edges = threshold_activation(img_mona_activated, 0.4)
 show_2d_activation(img_mona_edges)
 
 
