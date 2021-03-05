@@ -117,9 +117,16 @@ show_2d_activation(img_mona_activated)
 
 
 #%%
-#Edge detect stimulus
-img_mona_edges = threshold_activation(img_mona_activated, 0.4)
-show_2d_activation(img_mona_edges)
+#Edge detect stimulus face
+img_mona_face_edges_activated = stimulus_2d_activation(img_mona, 0.1, 10)
+img_mona_face_edges = threshold_activation(img_mona_face_edges_activated, 0.5)
+show_2d_activation(img_mona_face_edges)
+
+#%%
+#Edge detect stimulus all
+img_mona_all_edges_activated = stimulus_2d_activation(img_mona, 0.1, 16)
+img_mona_all_edges = threshold_activation(img_mona_all_edges_activated, 0.4)
+show_2d_activation(img_mona_all_edges)
 
 
 ### SECTION 5 ####################################
