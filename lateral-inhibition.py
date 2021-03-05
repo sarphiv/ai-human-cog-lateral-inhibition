@@ -139,5 +139,5 @@ show_2d_activation(img_hermann)
 
 #%%
 #Convolve stimulus
-img_hermann_activated = stimulus_2d_activation(img_hermann, 0.1, 26)
+img_hermann_activated = stimulus_2d_activation(img_hermann, 0.1, 5)
 show_2d_activation(img_hermann_activated)
