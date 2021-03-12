@@ -113,8 +113,11 @@ show_2d_activation(img_mona)
 
 #%%
 #Convolve stimulus
+for k in [1, 2, 4, 8, 16, 32]:
+    show_2d_activation(stimulus_2d_activation(img_mona, 0.1, k))
+
 img_mona_activated = stimulus_2d_activation(img_mona, 0.1, 16)
-show_2d_activation(img_mona_activated)
+# show_2d_activation(img_mona_activated)
 
 
 #%%
