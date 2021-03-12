@@ -24,8 +24,9 @@ def threshold_activation(activation, threshold):
     return np.array(activation >= threshold, dtype = np.float)
 
 
-def show_activation(activation):
-    plt.bar(np.arange(len(activation)), activation)
+def show_activation(activation, stimulus):
+    plt.bar(np.arange(len(stimulus)), stimulus)
+    plt.bar(np.arange(1, len(activation) + 1), activation)
     plt.show()
     print(f"Activation levels: {activation}")
 
@@ -39,8 +40,8 @@ activation = stimulus_activation(stimulus, 0.1)
 edges = threshold_activation(activation, 0.9)
 
 #Show raw and edge activations
-show_activation(activation)
-show_activation(edges)
+show_activation(activation, stimulus)
+show_activation(edges, stimulus)
 
 
 ### SECTION 2 ####################################
@@ -50,7 +51,7 @@ stimulus = np.array([0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5])
 activation = stimulus_activation(stimulus, 0.1)
 
 #Mach bands illusion
-show_activation(activation)
+show_activation(activation, stimulus)
 
 
 ### SECTION 3 ####################################
